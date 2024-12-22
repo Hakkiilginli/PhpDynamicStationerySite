@@ -1,0 +1,752 @@
+/* Genel Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%; /* Sayfanın en az ekran yüksekliği kadar olmasını sağlar */
+    background-image: url('../images/arkaplan8.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.welcome-msg {
+    font-size: 14px;
+    color: #ffcc00;
+}
+
+/* Ürün Bölümü */
+.product-section {
+    padding: 40px 20px;
+    text-align: center;
+   /*   background-color: #f4f4f4;*/
+}
+
+.product-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+}   
+
+/* Ürün Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.product-card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product-card .btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card .btn:hover {
+    background-color: #525252;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Login ve Register Sayfası */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+   
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-container p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-container a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.form-container a:hover {
+    color: #0056b3;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Sepet Bölümü */
+.cart-section {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cart-section h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sepet Tablosu */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.cart-empty {
+    display: flex;
+    text-align: center;
+    margin: 50px auto;
+}
+.empty-cart-table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+.empty-cart-table td {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #000000;
+    border: 1px solid #ddd;
+}
+.return-home .btn {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.return-home .btn:hover {
+    background-color: #0056b3;
+}
+
+.cart-table th, .cart-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.cart-table th {
+    background-color: #f8f8f8;
+    font-size: 16px;
+    color: #555;
+}
+
+.cart-table td {
+    font-size: 14px;
+     background-color: #f4f4f4;
+}
+
+.cart-table .remove-btn {
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cart-table .remove-btn:hover {
+    background-color: #e53935;
+}
+
+/* Sepet Özeti */
+.cart-summary {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cart-summary .btn, .cart-summary .btn-danger {
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.cart-summary .btn:hover {
+    background-color: #218838;
+}
+
+.cart-summary .btn-danger {
+    background-color: #dc3545;
+}
+
+.cart-summary .btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Header Stil */
+.main-header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 100px;  /* Yeni genişlik */
+    height: auto;  /* Yüksekliği otomatik yaparak orantılı büyütme */
+}
+
+.store-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.header-nav .nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.header-nav .nav-link:hover {
+    background-color: #555;
+}
+
+.welcome-msg {
+    font-size: 14px;
+    color: #ffcc00;
+}
+
+/* Sepet ve diğer öğelere ait stil */
+.nav-link, .welcome-msg {
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffcc00;
+}
+
+/* Admin Paneli Container */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar (Sol Menü) */
+.sidebar {
+    background-color: #2d3e50;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-header h2 {
+    font-size: 24px;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-link:hover {
+    background-color: #34495E;
+}
+    
+/* Ana İçerik */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.main-header {
+    display: flex;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.main-header p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* İçerik Kartları */
+.content {
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color:#f4f4f4;
+    
+}
+
+.content-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.content-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Butonlar */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #000000;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #454545;
+}
+/* Kullanıcı Tablosu */
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.users-table th, .users-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.users-table th {
+    background-color: #f8f8f8;
+    font-size: 16px;
+    color: #555;
+}
+
+.users-table td {
+    font-size: 14px;
+}
+
+.users-table .btn-secondary {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.users-table .btn-secondary:hover {
+    background-color: #0056b3;
+}
+/* Bize Ulaşın Formu için Stil */
+.contact-section {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Arka plan rengi */
+    border-radius: 8px; /* Köşe yuvarlama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section form label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+.contact-section form input, 
+.contact-section form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-section form button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-section form button:hover {
+    background-color: #4d4d4d;
+}
+
+/* Başarı ve Hata Mesajları */
+.success-message {
+    color: green;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Genel olarak Form için Padding ve Margin */
+.contact-section form input, 
+.contact-section form textarea {
+    width: 100%; /* Tam genişlik */
+}
+
+.contact-section form button {
+    width: 100%; /* Buton da tam genişlik */
+}
+/* Sipariş Detayları Alanı */
+.order-details {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlıklar */
+.order-details h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.order-details h2 {
+    color: #444;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Paragraflar */
+.order-details p {
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.order-details p strong {
+    color: #333;
+}
+
+/* Tablo Alanı */
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Tablo Başlıkları */
+.order-items-table th {
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Tablo Satırları */
+.order-items-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Alternatif Satır Renkleri */
+.order-items-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.order-items-table tr:hover {
+    background-color: #f1f1f1;
+}
+/* Tablo Tasarımı */
+#order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#order-table th, #order-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#order-table th {
+    background-color: #1abc9c;
+    color: white;
+    font-size: 14px;
+}
+
+#order-table tr:hover {
+    background-color: #f2f2f2;
+}
+  
